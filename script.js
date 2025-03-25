@@ -1,5 +1,5 @@
 const container = document.querySelector("#container");
-
+const boton = document.createElement("button");
 
 function gridDisplay(row,column) {
     
@@ -22,6 +22,18 @@ function gridDisplay(row,column) {
     }
 }
 
+
+boton.id = 'bt-c';
+boton.textContent = 'Change NxN';
+ 
+boton.addEventListener("click", () => {
+    
+    container.textContent = '';
+    container.appendChild(boton);
+    gridDisplay(n,m)
+})
+
+container.appendChild(boton);
 
 
 gridDisplay(10,10);
