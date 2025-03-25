@@ -27,7 +27,14 @@ boton.id = 'bt-c';
 boton.textContent = 'Change NxN';
  
 boton.addEventListener("click", () => {
-    
+    let n = prompt("Indicate the N rows");
+    while(n > 100 || n < 1) {
+        n = prompt("Indicate the N rows with valid domain");
+    }
+    let m = prompt("Indicate the M columns");
+    while(m > 100 || m < 1) {
+        m = prompt("Indicate the m columns with valid domain");
+    }
     container.textContent = '';
     container.appendChild(boton);
     gridDisplay(n,m)
